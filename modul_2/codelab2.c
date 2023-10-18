@@ -2,7 +2,8 @@
 #include <string.h>
 #include <stdio.h>
 
-int main() {
+int main() 
+{
 // Boolean
     bool isTrue = true;
     bool isFalse = false;
@@ -30,5 +31,6 @@ int main() {
     printf("Address of num: %p\n", &num);
     printf("Value of ptr: %d\n", *ptr);
     printf("Value pointed by ptr: %p\n", ptr );
+
     return 0;
 }

@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
     float sapiJantan1;
     float sapiJantan2;
     float sapiBetina1;
@@ -21,4 +22,6 @@ int main(){
 
     printf("\nHasil Berat Sapi: %.2f\n", sapiJantan1 + sapiJantan2 + sapiBetina1 + sapiBetina2);
     printf("Hasil Berat Kambing: %.2f\n", kambing1 + kambing2 + kambing3);
+
+    return 0;
 }

@@ -1,11 +1,13 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
     float mat;
     float fis;
     float bio;
     float hasil;
 
+    printf("=== Penghitungan Nilai Rata-Rata ===\n");
     printf("Masukkan nilai Matematika: ");
     scanf("%f", &mat);
     printf("Masukkan nilai Fisika: ");
@@ -14,4 +16,6 @@ int main(){
     scanf("%f", &bio);
     hasil = (mat + fis + bio) / 3;
     printf("Nilai Rata-rata: %.2f\n", hasil);
+
+    return 0;
 }
