@@ -11,6 +11,7 @@ enum minuman
 };
 
 int pilihMakanan, pilihMinuman;
+int hargaMakanan, hargaMinuman;
 float harga, bayar, kembalian;
 char member;
 
@@ -27,6 +28,44 @@ int main()
     scanf("%d", &pilihMakanan);
     printf("\n");
 
+    if (pilihMakanan == 1){
+        hargaMakanan = nasiGoreng;
+    }
+    else if (pilihMakanan == 2){
+        hargaMakanan = mieGoreng;
+    }
+    else if (pilihMakanan == 3){
+        hargaMakanan = ayamGoreng;
+    }
+    else if (pilihMakanan == 4){
+        hargaMakanan = baksoGoreng;
+    }
+    else if (pilihMakanan == 5){
+        hargaMakanan = mieAyam;
+    }
+    else{
+        printf("Makanan Tidak Tersedia");
+    }
+
+    switch(hargaMakanan)
+    {
+        case 0:
+            harga += 15000;
+            break;
+        case 1:
+            harga += 15000;
+            break;
+        case 2:
+            harga += 10000;
+            break;
+        case 3:
+            harga += 12000;
+            break;
+        case 4:
+            harga += 8000;
+            break;
+    }
+
     printf("Menu Minuman: \n");
     printf("1. Air Mineral \t Rp. 3000 \n");
     printf("2. Es Teh \t Rp. 4000 \n");
@@ -37,73 +76,66 @@ int main()
     scanf("%d", &pilihMinuman);
     printf("\n");
 
-    switch(pilihMakanan)
-    {
-        case 1:
-            harga += 15000;
-            break;
-        case 2:
-            harga += 15000;
-            break;
-        case 3:
-            harga += 10000;
-            break;
-        case 4:
-            harga += 12000;
-            break;
-        case 5:
-            harga += 8000;
-            break;
-        default:
-            printf("Makanan Tidak Tersedia");
+    if (pilihMinuman == 1){
+        hargaMinuman = nasiGoreng;
     }
-
-    switch(pilihMinuman)
+    else if (pilihMinuman == 2){
+        hargaMinuman = mieGoreng;
+    }
+    else if (pilihMinuman == 3){
+        hargaMinuman = ayamGoreng;
+    }
+    else if (pilihMinuman == 4){
+        hargaMinuman = baksoGoreng;
+    }
+    else if (pilihMinuman == 5){
+        hargaMinuman = mieAyam;
+    }
+    else{
+        printf("Minuman Tidak Tersedia");
+    }
+    
+    switch(hargaMinuman)
     {
-        case 1:
+        case 0:
             harga += 3000;
             break;
+        case 1:
+            harga += 4000;
+            break;
         case 2:
             harga += 4000;
             break;
         case 3:
-            harga += 4000;
-            break;
-        case 4:
             harga += 5000;
             break;
-        case 5:
+        case 4:
             harga += 6000;
             break;
-        default:
-            printf("Minuman Tidak Tersedia");
     }
 
     printf("Apakah Anda sudah menjadi member? (Y/N): ");
     scanf(" %c", &member);
 
-    if (member == 'Y' || member == 'y')
-    {
+    if (member == 'Y' || member == 'y'){
         harga = harga * 0.9;
     }
 
     printf("\n");
     printf("Total harga: %.2f \n", harga);
     printf("Alamat memori variabel harga total: %p \n\n", &harga);
+    
     printf("Masukkan jumlah uang pembayaran: ");
     scanf("%f", &bayar);
 
-    if (bayar == harga)
-    {
+    if (bayar == harga){
         printf("Terima kasih \n");
     }
-    else if (bayar < harga)
-    {
+    else if (bayar < harga){
         printf("Mohon maaf, Uang Anda kurang \n");
         return 0;
     }
-    else if (bayar > harga)
-    {
+    else if (bayar > harga){
         kembalian = bayar - harga;
         printf("Kembalian Anda: %.2f \n", kembalian);
     }

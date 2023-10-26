@@ -6,6 +6,7 @@ enum film
 };
 
 int pilihan;
+int genre;
 
 int main()
 {
@@ -16,18 +17,29 @@ int main()
     printf("Pilihan Anda: ");
     scanf("%d", &pilihan);
 
-    switch (pilihan)
+    if (pilihan == 1){
+        genre = Unstoppable;
+    }
+    else if (pilihan == 2){
+        genre = Insidious;
+    }
+    else if (pilihan == 3){
+        genre = Us;
+    }
+    else{
+        printf("Masukkan pilihan yang sesuai \n");
+    }
+    
+    switch (genre)
     {
-        case 1: 
+        case 0: 
             printf("Film Action \n");
             break;
-        case 2:
+        case 1:
             printf("FIlm Horror \n");
             break;
-        case 3:
+        case 2:
             printf("Film Thriller \n");
             break;
-        default:
-            printf("masukkan pilihan yang sesuai \n");
     }
 }
