@@ -17,16 +17,13 @@ int main()
     printf("Pilihan Anda: ");
     scanf("%d", &pilihan);
 
-    if (pilihan == 1){
+    if (pilihan == 1) {
         genre = Unstoppable;
-    }
-    else if (pilihan == 2){
+    } else if (pilihan == 2) {
         genre = Insidious;
-    }
-    else if (pilihan == 3){
+    } else if (pilihan == 3) {
         genre = Us;
-    }
-    else{
+    } else {
         printf("Masukkan pilihan yang sesuai \n");
     }
     
