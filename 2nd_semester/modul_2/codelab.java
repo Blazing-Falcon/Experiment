@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class Mahasiswa{
-	public static String[] nama = new String[5];
+    public static String[] nama = new String[5];
     public static String[] jurusan = new String[5];
     public static String[] nim = new String[5];
 
@@ -24,17 +24,17 @@ class Mahasiswa{
 
         System.out.print("Masukkan jurusan mahasiswa: ");
         jurusan[i] = scanString.nextLine();
-        
+
         System.out.print("Data Mahasiswa berhasil ditambahkan.\n");
     }
 
     static String tampilUniversitas(){
-		return "Universitas Muhammadiyah Malang\n";
-	}
+        return "Universitas Muhammadiyah Malang\n";
+    }
 
-	String tampilDataMahasiswa(int i){
-	    return "Nama: "+nama[i]+", NIM: "+(nim[i])+", Jurusan: "+jurusan[i];
-	}
+    String tampilDataMahasiswa(int i){
+        return "Nama: "+nama[i]+", NIM: "+(nim[i])+", Jurusan: "+jurusan[i];
+    }
 }
 
 class Main{
@@ -43,7 +43,7 @@ class Main{
         System.out.print("Pilihan Anda: ");
     }
 
-	public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         Mahasiswa mahasiswa = new Mahasiswa();
         Main main = new Main();
         int i = 0;
@@ -64,5 +64,5 @@ class Main{
                 break;
             }
         }
-	}
+    }
 }
